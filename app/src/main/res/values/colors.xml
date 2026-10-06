@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="admin_badge_text">#E65100</color>
+    <color name="user_badge_text">#0D47A1</color>
+    <color name="error_red">#D32F2F</color>
 </resources>
