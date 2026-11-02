@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/catalog_background"
@@ -19,317 +18,310 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:gravity="center_horizontal"
+            android:maxWidth="1400dp"
+            android:orientation="vertical"
             android:padding="8dp">
 
-            <LinearLayout
+            <!-- Header Banner -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxWidth="1400dp"
-                android:orientation="vertical">
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:strokeColor="@color/card_stroke"
+                app:strokeWidth="1dp">
 
-                <!-- Header Banner -->
-                <com.google.android.material.card.MaterialCardView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="24dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/admin_panel_title"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/admin_panel_subtitle"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLogout"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/logout"
+                        android:textColor="@color/stock_empty"
+                        app:strokeColor="@color/stock_empty" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Navigation Menu Grid -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/admin_menu_title"
+                android:textColor="@color/amber_light"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:rowOrderPreserved="false">
+
+                <!-- Venta -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:cardBackgroundColor="@color/card_background"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="8dp"
+                    app:cardCornerRadius="16dp"
                     app:strokeColor="@color/card_stroke"
                     app:strokeWidth="1dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:padding="24dp">
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Panel Administrador"
-                                android:textColor="@color/white"
-                                android:textSize="24sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Gestión de inventario, productos y operaciones en tiempo real."
-                                android:textColor="@color/text_secondary"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnLogout"
-                            style="?attr/materialButtonOutlinedStyle"
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cerrar sesión"
-                            android:textColor="@color/stock_empty"
-                            app:strokeColor="@color/stock_empty" />
+                            android:text="@string/sale_title"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/sale_subtitle"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Navigation Menu Grid -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <!-- Productos -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardProducts"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:text="Menú Admin"
-                    android:textColor="@color/amber_light"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/card_background"
+                    app:cardCornerRadius="16dp"
+                    app:strokeColor="@color/card_stroke"
+                    app:strokeWidth="1dp">
 
-                <GridLayout
-                    android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/products_title"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/products_subtitle"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Venta Libre -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardQuickSale"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:alignmentMode="alignMargins"
-                    android:columnCount="2"
-                    android:rowOrderPreserved="false">
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/card_background"
+                    app:cardCornerRadius="16dp"
+                    app:strokeColor="@color/card_stroke"
+                    app:strokeWidth="1dp">
 
-                    <!-- Venta -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/cardSale"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:layout_margin="8dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        app:cardBackgroundColor="@color/card_background"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/card_stroke"
-                        app:strokeWidth="1dp">
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="20dp">
+                            android:text="@string/quick_sale_card_title"
+                            android:textColor="@color/amber_light"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="🛒 Venta"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/quick_sale_card_subtitle"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Registrar y gestionar ventas"
-                                android:textColor="@color/text_secondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </com.google.android.material.card.MaterialCardView>
+                <!-- Gastos -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardExpenses"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/card_background"
+                    app:cardCornerRadius="16dp"
+                    app:strokeColor="@color/card_stroke"
+                    app:strokeWidth="1dp">
 
-                    <!-- Productos -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/cardProducts"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:layout_margin="8dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        app:cardBackgroundColor="@color/card_background"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/card_stroke"
-                        app:strokeWidth="1dp">
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="20dp">
+                            android:text="@string/expenses_title"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="📦 Productos"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/expenses_subtitle"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Catálogo e inventario"
-                                android:textColor="@color/text_secondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </com.google.android.material.card.MaterialCardView>
+                <!-- Envases -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardContainers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/card_background"
+                    app:cardCornerRadius="16dp"
+                    app:strokeColor="@color/card_stroke"
+                    app:strokeWidth="1dp">
 
-                    <!-- Venta Libre -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/cardQuickSale"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:layout_margin="8dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        app:cardBackgroundColor="@color/card_background"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/card_stroke"
-                        app:strokeWidth="1dp">
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="20dp">
+                            android:text="@string/containers_title"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="⚡ Venta Libre"
-                                android:textColor="@color/amber_light"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/containers_subtitle"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Venta rápida por monto libre"
-                                android:textColor="@color/text_secondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </com.google.android.material.card.MaterialCardView>
+                <!-- Resumen -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSummary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/card_background"
+                    app:cardCornerRadius="16dp"
+                    app:strokeColor="@color/card_stroke"
+                    app:strokeWidth="1dp">
 
-                    <!-- Gastos -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/cardExpenses"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:layout_margin="8dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        app:cardBackgroundColor="@color/card_background"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/card_stroke"
-                        app:strokeWidth="1dp">
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="20dp">
+                            android:text="@string/summary_title"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="💸 Gastos"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Control de gastos operativos"
-                                android:textColor="@color/text_secondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- Envases -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/cardContainers"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:layout_margin="8dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        app:cardBackgroundColor="@color/card_background"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/card_stroke"
-                        app:strokeWidth="1dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="20dp">
+                            android:layout_marginTop="4dp"
+                            android:text="@string/summary_subtitle"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="🔄 Envases"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Gestión de envases y depósitos"
-                                android:textColor="@color/text_secondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- Resumen -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/cardSummary"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:layout_margin="8dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        app:cardBackgroundColor="@color/card_background"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/card_stroke"
-                        app:strokeWidth="1dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="20dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="📈 Resumen"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Reportes y estadísticas"
-                                android:textColor="@color/text_secondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                </GridLayout>
-
-            </LinearLayout>
+            </GridLayout>
 
         </LinearLayout>
     </ScrollView>
