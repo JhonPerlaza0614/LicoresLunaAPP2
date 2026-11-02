@@ -3,7 +3,6 @@ package com.licoresluna2.views
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
@@ -42,13 +41,13 @@ class QuickSaleActivity : AppCompatActivity() {
         val amountText = binding.etAmount.text?.toString()?.trim().orEmpty()
         val amount = amountText.toDoubleOrNull()
 
-        if (amount == null || !amount.isFinite() || amount <= 0.0) {
-            showMessage(getString(R.string.quick_sale_invalid_amount), false)
+        if ((amount == null) || (!amount.isFinite()) || (amount <= 0.0)) {
+            showMessage(getString(R.string.quick_sale_invalid_amount), success = false)
             binding.etAmount.requestFocus()
             return
         }
 
-        setLoading(true)
+        setLoading(loading = true)
         lifecycleScope.launch {
             try {
                 app.supabaseClient.postgrest.rpc(
@@ -56,25 +55,25 @@ class QuickSaleActivity : AppCompatActivity() {
                     parameters = buildJsonObject {
                         put("p_total", amount)
                         put("p_payment_method", "cash")
-                    }
+                    },
                 )
                 binding.etAmount.text?.clear()
                 hideKeyboard()
                 showMessage(
                     getString(
                         R.string.quick_sale_success,
-                        currencyFormat.format(amount)
+                        currencyFormat.format(amount),
                     ),
-                    true
+                    success = true
                 )
             } catch (exception: Exception) {
                 showMessage(
                     exception.localizedMessage
                         ?: getString(R.string.quick_sale_error),
-                    false
+                    success = false
                 )
             } finally {
-                setLoading(false)
+                setLoading(loading = false)
             }
         }
     }
@@ -97,7 +96,7 @@ class QuickSaleActivity : AppCompatActivity() {
     }
 
     private fun hideKeyboard() {
-        (getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager)
-            .hideSoftInputFromWindow(binding.etAmount.windowToken, 0)
+        getSystemService(InputMethodManager::class.java)
+            ?.hideSoftInputFromWindow(binding.etAmount.windowToken, 0)
     }
 }

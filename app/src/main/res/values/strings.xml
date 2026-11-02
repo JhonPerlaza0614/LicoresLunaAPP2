@@ -30,4 +30,33 @@
         <item quantity="one">%1$d producto encontrado</item>
         <item quantity="other">%1$d productos encontrados</item>
     </plurals>
+
+    <!-- Login -->
+    <string name="login_title">Licores Luna</string>
+    <string name="login_subtitle">Ingresa con tus credenciales de Supabase</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="login_warning_format">⚠️ %1$s</string>
+
+    <!-- Home -->
+    <string name="admin_panel_title">Panel Administrador</string>
+    <string name="admin_panel_subtitle">Gestión de inventario, productos y operaciones en tiempo real.</string>
+    <string name="admin_menu_title">Menú Admin</string>
+    <string name="sale_title">🛒 Venta</string>
+    <string name="sale_subtitle">Registrar y gestionar ventas</string>
+    <string name="products_title">📦 Productos</string>
+    <string name="products_subtitle">Catálogo e inventario</string>
+    <string name="quick_sale_card_title">⚡ Venta Libre</string>
+    <string name="quick_sale_card_subtitle">Venta rápida por monto libre</string>
+    <string name="expenses_title">💸 Gastos</string>
+    <string name="expenses_subtitle">Control de gastos operativos</string>
+    <string name="containers_title">🔄 Envases</string>
+    <string name="containers_subtitle">Gestión de envases y depósitos</string>
+    <string name="summary_title">📈 Resumen</string>
+    <string name="summary_subtitle">Reportes y estadísticas</string>
+
+    <!-- General -->
+    <string name="section_under_development">Sección en desarrollo</string>
+    <string name="back_arrow">← Volver</string>
 </resources>
