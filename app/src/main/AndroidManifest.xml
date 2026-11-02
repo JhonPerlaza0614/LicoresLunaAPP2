@@ -25,6 +25,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".views.HomeActivity" />
+        <activity
+            android:name=".views.QuickSaleActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".views.SaleActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

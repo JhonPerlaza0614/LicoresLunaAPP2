@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Licores Luna2</string>
+    <string name="catalog_title">Catálogo Disponible</string>
+    <string name="catalog_subtitle">Consulta precios y stock en tiempo real.</string>
+    <string name="search_hint">Buscar producto...</string>
+    <string name="all_categories">Todas las categorías</string>
+    <string name="available">Disponible</string>
+    <string name="sold_out">Agotado</string>
+    <string name="user">Usuario</string>
+    <string name="admin_role">👑 Administrador</string>
+    <string name="user_role">👤 Usuario</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="quick_sale_title">⚡ Venta Libre</string>
+    <string name="quick_sale_subtitle">Ingreso rápido para confitería, cigarrillos y artículos menores.</string>
+    <string name="quick_sale_amount_label">MONTO DEL INGRESO</string>
+    <string name="quick_sale_amount_hint">0.00</string>
+    <string name="quick_sale_submit">🚀 Registrar ingreso</string>
+    <string name="quick_sale_invalid_amount">Por favor, ingresa un monto válido mayor a 0.</string>
+    <string name="quick_sale_success">¡Ingreso activo de %1$s registrado con éxito!</string>
+    <string name="quick_sale_error">Error al registrar el ingreso libre.</string>
+    <string name="back">Volver</string>
+    <string name="retry">Reintentar</string>
+    <string name="no_products">0 productos encontrados</string>
+    <string name="no_products_filters">No se encontraron productos para los filtros seleccionados.</string>
+    <string name="catalog_connection_error">Error al conectar con la base de datos.</string>
+    <string name="product_image">Imagen del producto</string>
+    <string name="product_stock">Stock: %1$d uds.</string>
+    <string name="product_deposit">🛡️ Envase: +%1$s</string>
+    <plurals name="products_found">
+        <item quantity="one">%1$d producto encontrado</item>
+        <item quantity="other">%1$d productos encontrados</item>
+    </plurals>
 </resources>
