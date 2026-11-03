@@ -31,6 +31,36 @@
         <item quantity="other">%1$d productos encontrados</item>
     </plurals>
 
+    <!-- Módulo de egresos -->
+    <string name="expenses_title">💸 Gestión de Egresos y Compras</string>
+    <string name="expenses_subtitle">Registra salidas de caja generales o compras directas de mercancía para reabastecer el inventario de la tienda.</string>
+    <string name="expenses_amount_label">Monto Salida ($)</string>
+    <string name="expenses_amount_hint">Ej: 45000</string>
+    <string name="expenses_product_label">Vincular a Producto (Opcional)</string>
+    <string name="expenses_general_option">-- Gasto General Operativo --</string>
+    <string name="expenses_quantity_label">Cantidad Comprada</string>
+    <string name="expenses_quantity_hint">Bloqueado - Elige un producto</string>
+    <string name="expenses_note_label">Nota descriptiva / Concepto del Gasto</string>
+    <string name="expenses_note_hint">Detalla la razón del gasto (Ej: Pago de factura de energía o Compra de stock a proveedor)</string>
+    <string name="expenses_submit">Registrar Gasto de Caja</string>
+    <string name="expenses_submitting">Procesando registro financiero…</string>
+    <string name="expenses_history_title">Historial de Salidas Registradas</string>
+    <string name="expenses_history_subtitle">Auditoría en tiempo real de los flujos de dinero.</string>
+    <string name="expenses_total_label">Total Egreso Catálogo:</string>
+    <string name="expenses_search_hint">Buscar por descripción…</string>
+    <string name="expenses_loading">Sincronizando caja de egresos…</string>
+    <string name="expenses_empty">No se registran egresos que coincidan con la búsqueda.</string>
+    <string name="expenses_invalid_amount">El monto del gasto debe ser un valor mayor a cero.</string>
+    <string name="expenses_note_required">Por favor, describe el concepto del gasto.</string>
+    <string name="expenses_invalid_quantity">Si asocias un producto, debes especificar una cantidad válida comprada.</string>
+    <string name="expenses_success_stock">Gasto registrado e inventario incrementado correctamente.</string>
+    <string name="expenses_success_general">Gasto operativo registrado con éxito.</string>
+    <string name="expenses_load_error">Error al sincronizar el módulo de egresos.</string>
+    <string name="expenses_submit_error">Error crítico al procesar la transacción.</string>
+    <string name="expenses_type_stock">📦 Stock: +%1$d %2$s</string>
+    <string name="expenses_type_general">⚙️ General</string>
+    <string name="expenses_money_format">$%1$s</string>
+    <string name="expenses_negative_amount">-%1$s</string>
     <!-- Login -->
     <string name="login_title">Licores Luna</string>
     <string name="login_subtitle">Ingresa con tus credenciales de Supabase</string>

@@ -36,9 +36,9 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, QuickSaleActivity::class.java))
         }
 
-        //binding.cardExpenses.setOnClickListener {
-        //    startActivity(Intent(this, ExpensesActivity::class.java))
-        //}
+        binding.cardExpenses.setOnClickListener {
+            startActivity(Intent(this, ExpensesActivity::class.java))
+        }
 
         //binding.cardContainers.setOnClickListener {
         //    startActivity(Intent(this, ContainersActivity::class.java))

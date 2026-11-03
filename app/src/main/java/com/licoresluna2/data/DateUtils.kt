@@ -28,3 +28,20 @@ fun dateKeyFromIso(iso: String): String {
         iso
     }
 }
+
+/**
+ * Formatea una fecha ISO-8601 de Supabase (UTC) como dd/MM/yyyy HH:mm en hora local.
+ * Compatible desde Android 7.0 (API 24) sin depender de java.time.
+ */
+fun formatIsoDateTime(iso: String): String {
+    return try {
+        val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US).apply {
+            timeZone = TimeZone.getTimeZone("UTC")
+        }
+        val display = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale("es", "CO"))
+        val date = parser.parse(iso.take(19)) ?: return iso.take(10)
+        display.format(date)
+    } catch (e: Exception) {
+        iso.take(10)
+    }
+}
