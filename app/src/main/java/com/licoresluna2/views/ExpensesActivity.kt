@@ -135,9 +135,9 @@ class ExpensesActivity : AppCompatActivity() {
         } else {
             expenses.filter { expense ->
                 expense.note.lowercase(Locale.getDefault()).contains(term) ||
-                    expense.product?.name
-                        ?.lowercase(Locale.getDefault())
-                        ?.contains(term) == true
+                        expense.product?.name
+                            ?.lowercase(Locale.getDefault())
+                            ?.contains(term) == true
             }
         }
 

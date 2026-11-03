@@ -79,8 +79,6 @@
     <string name="products_subtitle">Catálogo e inventario</string>
     <string name="quick_sale_card_title">⚡ Venta Libre</string>
     <string name="quick_sale_card_subtitle">Venta rápida por monto libre</string>
-    <string name="expenses_title">💸 Gastos</string>
-    <string name="expenses_subtitle">Control de gastos operativos</string>
     <string name="containers_title">🔄 Envases</string>
     <string name="containers_subtitle">Gestión de envases y depósitos</string>
     <string name="summary_title">📈 Resumen</string>
