@@ -83,7 +83,7 @@
                 android:layout_marginTop="2dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 tools:text="Cerveza Club Colombia 330ml" />
@@ -94,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 tools:text="$5.500" />
@@ -141,7 +141,7 @@
                 android:layout_height="38dp"
                 android:paddingHorizontal="4dp"
                 android:text="@string/product_edit_button"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="11sp"
                 app:strokeColor="@color/card_stroke" />
 
