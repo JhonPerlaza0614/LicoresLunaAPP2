@@ -10,13 +10,13 @@
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="← Volver" />
+        android:text="@string/back_arrow" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="🛒 Venta"
+        android:text="@string/sale_title"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Sección en desarrollo"
+        android:text="@string/section_under_development"
         android:textColor="@color/text_secondary"
         android:textSize="16sp" />
 </LinearLayout>

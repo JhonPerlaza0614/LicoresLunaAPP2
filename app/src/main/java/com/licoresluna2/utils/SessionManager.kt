@@ -2,6 +2,7 @@ package com.licoresluna2.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.core.content.edit
 
 /**
  * Gestor local de sesión para almacenar las credenciales y el estado del usuario.
@@ -23,12 +24,11 @@ class SessionManager(context: Context) {
      * Guarda los datos de sesión tras un inicio de sesión exitoso.
      */
     fun saveUserSession(userId: String, email: String, isAdmin: Boolean) {
-        prefs.edit().apply {
+        prefs.edit {
             putBoolean(KEY_IS_LOGGED_IN, true)
             putString(KEY_USER_ID, userId)
             putString(KEY_USER_EMAIL, email)
             putBoolean(KEY_IS_ADMIN, isAdmin)
-            apply()
         }
     }
 
@@ -36,7 +36,9 @@ class SessionManager(context: Context) {
      * Actualiza el rol de administrador si se verifica posteriormente contra Supabase.
      */
     fun updateAdminStatus(isAdmin: Boolean) {
-        prefs.edit().putBoolean(KEY_IS_ADMIN, isAdmin).apply()
+        prefs.edit {
+            putBoolean(KEY_IS_ADMIN, isAdmin)
+        }
     }
 
     fun isLoggedIn(): Boolean = prefs.getBoolean(KEY_IS_LOGGED_IN, false)
@@ -51,6 +53,8 @@ class SessionManager(context: Context) {
      * Elimina todos los datos de la sesión actual al cerrar sesión.
      */
     fun clearSession() {
-        prefs.edit().clear().apply()
+        prefs.edit {
+            clear()
+        }
     }
 }

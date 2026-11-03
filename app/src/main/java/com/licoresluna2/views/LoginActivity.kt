@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.licoresluna2.LicoresLunaApp
+import com.licoresluna2.R
 import com.licoresluna2.databinding.ActivityLoginBinding
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.gotrue.providers.builtin.Email
@@ -21,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Si ya hay una sesión activa, ir directo a HomeActivity
-        if (app.sessionManager.isLoggedIn() || app.supabaseClient.auth.currentUserOrNull() != null) {
+        if (app.sessionManager.isLoggedIn() || (app.supabaseClient.auth.currentUserOrNull() != null)) {
             navigateToHome()
             return
         }
@@ -76,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun performLogin(emailInput: String, passwordInput: String) {
-        setLoading(true)
+        setLoading(isLoading = true)
         hideMessage()
 
         lifecycleScope.launch {
@@ -90,7 +91,7 @@ class LoginActivity : AppCompatActivity() {
                 val user = app.supabaseClient.auth.currentUserOrNull()
                 if (user == null) {
                     showMessage("No se pudo obtener la sesión del usuario. Intenta de nuevo.")
-                    setLoading(false)
+                    setLoading(isLoading = false)
                     return@launch
                 }
 
@@ -101,7 +102,7 @@ class LoginActivity : AppCompatActivity() {
                 app.sessionManager.saveUserSession(
                     userId = user.id,
                     email = user.email ?: emailInput,
-                    isAdmin = isAdmin
+                    isAdmin = isAdmin,
                 )
 
                 navigateToHome()
@@ -127,7 +128,7 @@ class LoginActivity : AppCompatActivity() {
                 }
 
                 showMessage(friendlyMessage)
-                setLoading(false)
+                setLoading(isLoading = false)
             }
         }
     }
@@ -148,7 +149,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showMessage(msg: String) {
-        binding.tvMessage.text = "⚠️ $msg"
+        binding.tvMessage.text = getString(R.string.login_warning_format, msg)
         binding.tvMessage.visibility = View.VISIBLE
     }
 

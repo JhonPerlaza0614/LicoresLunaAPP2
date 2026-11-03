@@ -9,7 +9,7 @@ import io.github.jan.supabase.postgrest.Postgrest
 object SupabaseClient {
     val client = createSupabaseClient(
         supabaseUrl = "https://jpasnudxbdnqizwmovvx.supabase.co",
-        supabaseKey = "sb_publishable_2aZfi4v3i24OESO6akrrCQ_oDL1oKfm"
+        supabaseKey = "sb_publishable_2aZfi4v3i24OESO6akrrCQ_oDL1oKfm",
     ) {
         install(Auth) {
             // La sesión se controla con SessionManager; no usar SettingsSessionManager

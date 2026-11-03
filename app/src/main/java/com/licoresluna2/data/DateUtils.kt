@@ -3,7 +3,6 @@ package com.licoresluna2.data
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import java.util.TimeZone
 
 /**
  * Utilidades de fecha compatibles desde Android 7.0 (API 24) en adelante.
@@ -25,7 +24,7 @@ fun dateKeyFromIso(iso: String): String {
             val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
             sdf.format(Date())
         }
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         iso
     }
 }
