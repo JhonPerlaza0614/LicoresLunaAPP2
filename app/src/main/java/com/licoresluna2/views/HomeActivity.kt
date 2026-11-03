@@ -57,6 +57,10 @@ class HomeActivity : AppCompatActivity() {
         binding.cardSummary.setOnClickListener {
             startActivity(Intent(this, SummaryActivity::class.java))
         }
+
+        binding.cardSettings.setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
+        }
     }
 
     private fun performLogout() {
