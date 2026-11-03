@@ -40,13 +40,13 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, ExpensesActivity::class.java))
         }
 
-        //binding.cardContainers.setOnClickListener {
-        //    startActivity(Intent(this, ContainersActivity::class.java))
-        //}
+        binding.cardContainers.setOnClickListener {
+            startActivity(Intent(this, ContainersActivity::class.java))
+        }
 
-        //binding.cardSummary.setOnClickListener {
-        //    startActivity(Intent(this, SummaryActivity::class.java))
-        //}
+        binding.cardSummary.setOnClickListener {
+            startActivity(Intent(this, SummaryActivity::class.java))
+        }
     }
 
     private fun performLogout() {
