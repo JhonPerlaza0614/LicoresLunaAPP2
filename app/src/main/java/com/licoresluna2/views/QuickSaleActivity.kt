@@ -3,7 +3,10 @@ package com.licoresluna2.views
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
 import com.licoresluna2.LicoresLunaApp
@@ -27,9 +30,16 @@ class QuickSaleActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         binding = ActivityQuickSaleBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         binding.etAmount.requestFocus()
         binding.etAmount.doAfterTextChanged { binding.tvMessage.visibility = View.GONE }
@@ -64,7 +74,7 @@ class QuickSaleActivity : AppCompatActivity() {
                         R.string.quick_sale_success,
                         currencyFormat.format(amount),
                     ),
-                    success = true
+                    success = true,
                 )
             } catch (exception: Exception) {
                 showMessage(

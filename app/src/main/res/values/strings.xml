@@ -32,8 +32,8 @@
     </plurals>
 
     <!-- Módulo de egresos -->
-    <string name="expenses_title">💸 Gestión de Egresos y Compras</string>
-    <string name="expenses_subtitle">Registra salidas de caja generales o compras directas de mercancía para reabastecer el inventario de la tienda.</string>
+    <string name="expenses_title">💸 Egresos y Compras</string>
+    <string name="expenses_subtitle">Registra salidas de dinero generales o compras de mercancía.</string>
     <string name="expenses_amount_label">Monto Salida ($)</string>
     <string name="expenses_amount_hint">Ej: 45000</string>
     <string name="expenses_product_label">Vincular a Producto (Opcional)</string>
@@ -87,4 +87,53 @@
     <!-- General -->
     <string name="section_under_development">Sección en desarrollo</string>
     <string name="back_arrow">← Volver</string>
+
+    <!-- Productos -->
+    <string name="products_header_new">📦 Registro de Nuevo Producto</string>
+    <string name="products_header_edit">📝 Editando Ficha de Producto</string>
+    <string name="products_header_desc">Configura especificaciones comerciales, impuestos, depósitos de envases retornables y stock disponible.</string>
+    <string name="product_name_label">NOMBRE DEL PRODUCTO</string>
+    <string name="product_name_hint">Ej: Cerveza Club Colombia 330ml</string>
+    <string name="product_price_label">PRECIO DE VENTA PÚBLICO ($)</string>
+    <string name="product_stock_label">INVENTARIO FÍSICO ACTUAL</string>
+    <string name="product_vat_enable">Gravar Impuesto (IVA)</string>
+    <string name="product_vat_rate_label">Tasa de Impuesto IVA (Ej: 0.19 para 19%)</string>
+    <string name="product_deposit_enable">Depósito Por Envase Retornable</string>
+    <string name="product_deposit_amount_label">Valor del Depósito / Envase ($)</string>
+    <string name="product_tags_label">CATEGORÍAS / ETIQUETAS ASOCIADAS</string>
+    <string name="product_image_label">IMAGEN ILUSTRATIVA DEL PRODUCTO</string>
+    <string name="product_select_image">Seleccionar Imagen</string>
+    <string name="product_submit_create">Crear Producto</string>
+    <string name="product_submit_update">Guardar Cambios</string>
+    <string name="product_submit_processing">Procesando cambios...</string>
+    <string name="product_cancel_edit">Cancelar</string>
+    <string name="products_list_title">Inventario de Productos Activos</string>
+    <string name="products_list_subtitle">Listado integrado de monitoreo técnico y control logístico.</string>
+    <string name="products_search_hint">Buscar por nombre...</string>
+    <string name="products_loading">Sincronizando catálogo...</string>
+    <string name="product_no_image">Sin Imagen</string>
+    <string name="product_units_format">%1$d Unidades</string>
+    <string name="product_out_of_stock">Agotado</string>
+    <string name="product_edit_button">Editar</string>
+    <string name="product_archive_button">Archivar</string>
+    <string name="product_confirm_create">¿Estás seguro de crear el producto "%1$s"?</string>
+    <string name="product_confirm_update">¿Deseas guardar los cambios en el producto "%1$s"?</string>
+    <string name="product_confirm_archive">¿Estás seguro de archivar "%1$s"? El producto no aparecerá en el catálogo.</string>
+    <string name="product_created_success">Producto registrado correctamente en el catálogo.</string>
+    <string name="product_updated_success">Producto actualizado con éxito.</string>
+    <string name="product_archived_success">Producto removido del catálogo activo.</string>
+    <string name="product_error_generic">Ocurrió un error inesperado al procesar la solicitud.</string>
+    <string name="no_file_selected">No se ha seleccionado archivo</string>
+
+    <!-- Filter & Form Toggle -->
+    <string name="product_new_button">➕ Nuevo Producto</string>
+    <string name="product_hide_form">➖ Ocultar Formulario</string>
+    <string name="filter_all_categories">Todas las categorías</string>
+    <string name="filter_status_all">Todos</string>
+    <string name="filter_status_active">Activos</string>
+    <string name="filter_status_available">En Stock</string>
+    <string name="filter_status_out_of_stock">Agotados</string>
+    <string name="filter_status_archived">Archivados</string>
+    <string name="product_unarchive_button">Restaurar</string>
+    <string name="product_unarchived_success">Producto restaurado al catálogo activo.</string>
 </resources>
