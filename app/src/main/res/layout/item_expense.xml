@@ -36,7 +36,7 @@
                 android:id="@+id/tvAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 tools:text="-$180.000" />
@@ -49,7 +49,7 @@
             android:layout_marginTop="6dp"
             android:ellipsize="end"
             android:maxLines="2"
-            android:textColor="#CBD5E1"
+            android:textColor="@color/text_secondary"
             android:textSize="12sp"
             android:textStyle="bold"
             tools:text="Coca cola 36 unidades" />

@@ -136,4 +136,15 @@
     <string name="filter_status_archived">Archivados</string>
     <string name="product_unarchive_button">Restaurar</string>
     <string name="product_unarchived_success">Producto restaurado al catálogo activo.</string>
+
+    <!-- Settings & Theme -->
+    <string name="settings_title">Configuración y Preferencias</string>
+    <string name="settings_subtitle">Personaliza la apariencia de la aplicación y tus preferencias de usuario.</string>
+    <string name="settings_theme_section_title">APARIENCIA Y TEMA VISUAL</string>
+    <string name="settings_theme_section_subtitle">Selecciona el modo de color para la interfaz de la aplicación.</string>
+    <string name="settings_theme_light">Modo Claro ☀️</string>
+    <string name="settings_theme_dark">Modo Oscuro 🌙</string>
+    <string name="settings_theme_system">Igual que el dispositivo 📱</string>
+    <string name="settings_card_title">Configuración</string>
+    <string name="settings_card_subtitle">Tema de la app y preferencias</string>
 </resources>

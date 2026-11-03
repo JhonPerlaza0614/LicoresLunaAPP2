@@ -19,4 +19,9 @@ class LicoresLunaApp : Application() {
     val authManager: AuthManager by lazy {
         AuthManager(supabaseClient)
     }
+
+    override fun onCreate() {
+        super.onCreate()
+        sessionManager.applySavedTheme()
+    }
 }

@@ -98,7 +98,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/products_header_new"
-                            android:textColor="@color/white"
+                            android:textColor="@color/text_primary"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -147,7 +147,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/product_name_hint"
                                 android:inputType="textCapWords"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/text_primary" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <!-- Price & Stock -->
@@ -179,7 +179,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:inputType="numberDecimal"
-                                    android:textColor="@color/white" />
+                                    android:textColor="@color/text_primary" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -201,7 +201,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:inputType="number"
-                                    android:textColor="@color/white" />
+                                    android:textColor="@color/text_primary" />
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
 
@@ -219,7 +219,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/product_vat_enable"
-                                android:textColor="@color/white"
+                                android:textColor="@color/text_primary"
                                 android:textSize="14sp" />
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -238,7 +238,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:inputType="numberDecimal"
-                                    android:textColor="@color/white" />
+                                    android:textColor="@color/text_primary" />
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
 
@@ -256,7 +256,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/product_deposit_enable"
-                                android:textColor="@color/white"
+                                android:textColor="@color/text_primary"
                                 android:textSize="14sp" />
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -277,7 +277,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:inputType="numberDecimal"
-                                    android:textColor="@color/white" />
+                                    android:textColor="@color/text_primary" />
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
 
@@ -398,7 +398,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/products_list_title"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -429,7 +429,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/text_primary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Category Filters Horizontal Chips -->
