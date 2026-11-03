@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import java.util.concurrent.atomic.AtomicInteger
 
@@ -21,9 +22,9 @@ import java.util.concurrent.atomic.AtomicInteger
  * created_at timestamp with time zone not null default now()
  */
 @Serializable
-internal data class AdminUserRow(
-    val user_id: String,
-    val created_at: String? = null
+data class AdminUserRow(
+    @SerialName("user_id") val userId: String,
+    @SerialName("created_at") val createdAt: String? = null,
 )
 
 /**
@@ -36,13 +37,13 @@ class AuthManager(private val supabase: SupabaseClient) {
     private val _currentUser = MutableStateFlow<UserInfo?>(null)
     val currentUser: StateFlow<UserInfo?> = _currentUser.asStateFlow()
 
-    private val _isAdmin = MutableStateFlow(false)
+    private val _isAdmin = MutableStateFlow(value = false)
     val isAdmin: StateFlow<Boolean> = _isAdmin.asStateFlow()
 
-    private val _authReady = MutableStateFlow(false)
+    private val _authReady = MutableStateFlow(value = false)
     val authReady: StateFlow<Boolean> = _authReady.asStateFlow()
 
-    private val _adminReady = MutableStateFlow(true)
+    private val _adminReady = MutableStateFlow(value = true)
     val adminReady: StateFlow<Boolean> = _adminReady.asStateFlow()
 
     private val adminRequestRef = AtomicInteger(0)
@@ -109,7 +110,7 @@ class AuthManager(private val supabase: SupabaseClient) {
         val user = try {
             supabase.auth.retrieveUserForCurrentSession()
             supabase.auth.currentUserOrNull()
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             null
         }
 
