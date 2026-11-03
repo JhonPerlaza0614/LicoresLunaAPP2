@@ -5,6 +5,7 @@ import io.github.jan.supabase.gotrue.Auth
 import io.github.jan.supabase.gotrue.MemoryCodeVerifierCache
 import io.github.jan.supabase.gotrue.MemorySessionManager
 import io.github.jan.supabase.postgrest.Postgrest
+import io.github.jan.supabase.storage.Storage
 
 object SupabaseClient {
     val client = createSupabaseClient(
@@ -20,5 +21,6 @@ object SupabaseClient {
             autoSaveToStorage = false
         }
         install(Postgrest)
+        install(Storage)
     }
 }
