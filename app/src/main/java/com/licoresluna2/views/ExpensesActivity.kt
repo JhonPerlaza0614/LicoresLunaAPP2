@@ -3,7 +3,6 @@ package com.licoresluna2.views
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,7 +17,7 @@ import kotlinx.coroutines.launch
 import java.text.NumberFormat
 import java.util.Locale
 
-class ExpensesActivity : AppCompatActivity() {
+class ExpensesActivity : BaseActivity() {
 
     private lateinit var binding: ActivityExpensesBinding
     private val app by lazy { application as LicoresLunaApp }

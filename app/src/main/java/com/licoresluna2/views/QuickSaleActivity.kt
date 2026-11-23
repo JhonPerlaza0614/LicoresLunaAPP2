@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.doAfterTextChanged
@@ -20,7 +19,7 @@ import kotlinx.serialization.json.put
 import java.text.NumberFormat
 import java.util.Locale
 
-class QuickSaleActivity : AppCompatActivity() {
+class QuickSaleActivity : BaseActivity() {
 
     private lateinit var binding: ActivityQuickSaleBinding
     private val app by lazy { application as LicoresLunaApp }

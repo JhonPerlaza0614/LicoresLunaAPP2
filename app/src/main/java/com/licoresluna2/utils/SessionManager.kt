@@ -24,6 +24,10 @@ class SessionManager(context: Context) {
         const val THEME_SYSTEM = "SYSTEM"
         const val THEME_LIGHT = "LIGHT"
         const val THEME_DARK = "DARK"
+        const val KEY_FONT_SCALE = "font_scale"
+        const val FONT_SCALE_SMALL = 0.90f
+        const val FONT_SCALE_DEFAULT = 1.00f
+        const val FONT_SCALE_LARGE = 1.10f
     }
 
     /**
@@ -81,14 +85,27 @@ class SessionManager(context: Context) {
         AppCompatDelegate.setDefaultNightMode(mode)
     }
 
+    fun saveFontScale(scale: Float) {
+        val safeScale = scale.coerceIn(FONT_SCALE_SMALL, FONT_SCALE_LARGE)
+        prefs.edit {
+            putFloat(KEY_FONT_SCALE, safeScale)
+        }
+    }
+
+    fun getFontScale(): Float =
+        prefs.getFloat(KEY_FONT_SCALE, FONT_SCALE_DEFAULT)
+            .coerceIn(FONT_SCALE_SMALL, FONT_SCALE_LARGE)
+
     /**
      * Elimina los datos de sesión del usuario pero mantiene la preferencia del tema.
      */
     fun clearSession() {
         val currentTheme = getThemeMode()
+        val currentFontScale = getFontScale()
         prefs.edit {
             clear()
             putString(KEY_THEME_MODE, currentTheme)
+            putFloat(KEY_FONT_SCALE, currentFontScale)
         }
     }
 }

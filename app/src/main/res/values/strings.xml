@@ -79,8 +79,6 @@
     <string name="products_subtitle">Catálogo e inventario</string>
     <string name="quick_sale_card_title">⚡ Venta Libre</string>
     <string name="quick_sale_card_subtitle">Venta rápida por monto libre</string>
-    <string name="containers_title">🔄 Envases</string>
-    <string name="containers_subtitle">Gestión de envases y depósitos</string>
     <string name="summary_title">📈 Resumen</string>
     <string name="summary_subtitle">Reportes y estadísticas</string>
 
@@ -145,6 +143,52 @@
     <string name="settings_theme_light">Modo Claro ☀️</string>
     <string name="settings_theme_dark">Modo Oscuro 🌙</string>
     <string name="settings_theme_system">Igual que el dispositivo 📱</string>
+    <string name="settings_font_section_title">TAMAÑO DE TEXTO</string>
+    <string name="settings_font_section_subtitle">Elige un tamaño cómodo. El texto grande está limitado para evitar desbordes.</string>
+    <string name="settings_font_small">Pequeño</string>
+    <string name="settings_font_default">Predeterminado</string>
+    <string name="settings_font_large">Grande</string>
     <string name="settings_card_title">Configuración</string>
     <string name="settings_card_subtitle">Tema de la app y preferencias</string>
+
+    <!-- Ventas -->
+    <string name="sale_search_hint">Buscar producto</string>
+    <string name="sale_current_lines">Productos en la venta actual</string>
+    <string name="sale_empty_lines">Usa el buscador para añadir productos a la venta.</string>
+    <string name="sale_payment_method">Método de pago</string>
+    <string name="sale_cash">💵 Efectivo</string>
+    <string name="sale_transfer">📱 Transferencia</string>
+    <string name="sale_subtotal">Subtotal líquido: $%1$s</string>
+    <string name="sale_deposit_total">Depósitos: +$%1$s</string>
+    <string name="sale_grand_total">Total a cobrar: $%1$s</string>
+    <string name="sale_submit">Registrar venta</string>
+    <string name="sale_update">Actualizar venta</string>
+    <string name="sale_submitting">Procesando transacción POS…</string>
+    <string name="sale_editing">Modo edición activo</string>
+    <string name="sale_cancel_edit">Cancelar edición</string>
+    <string name="sale_edit">Editar</string>
+    <string name="sale_delete">Eliminar</string>
+    <string name="sale_history_title">Ventas registradas</string>
+    <string name="sale_history_subtitle">Consulta y gestión de transacciones previas.</string>
+    <string name="sale_empty_history">No hay ventas registradas para el día seleccionado.</string>
+    <string name="sale_add_product">Agrega al menos un producto a la lista de venta.</string>
+    <string name="sale_created">Venta asentada, stock actualizado y registrada correctamente.</string>
+    <string name="sale_updated">Venta actualizada e inventario recalculado con éxito.</string>
+    <string name="sale_deleted">Venta eliminada y stock restaurado en el inventario.</string>
+    <string name="sale_submit_error">Error al procesar la venta.</string>
+    <string name="sale_load_error">Error al cargar los productos disponibles.</string>
+    <string name="sale_history_error">Error al cargar el historial de ventas.</string>
+    <string name="sale_delete_error">Error al eliminar la venta.</string>
+    <string name="sale_delete_title">Eliminar venta</string>
+    <string name="sale_delete_message">¿Eliminar esta venta? El stock correspondiente se devolverá automáticamente.</string>
+    <string name="sale_replace_title">Editar venta</string>
+    <string name="sale_replace_message">Hay productos en la terminal. ¿Deseas reemplazarlos con los datos de esta venta?</string>
+    <string name="sale_replace">Reemplazar</string>
+    <string name="sale_line_base">Base: $%1$s | Depósito: +$%2$s</string>
+    <string name="sale_charge_deposit">Cobrar envase</string>
+    <string name="sale_exchange_deposit">Trae envase (intercambio)</string>
+    <plurals name="sale_items_count">
+        <item quantity="one">%1$d item registrado</item>
+        <item quantity="other">%1$d items registrados</item>
+    </plurals>
 </resources>

@@ -3,7 +3,6 @@ package com.licoresluna2.views
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
@@ -11,7 +10,7 @@ import com.licoresluna2.LicoresLunaApp
 import com.licoresluna2.databinding.ActivityHomeBinding
 import kotlinx.coroutines.launch
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
 
     private lateinit var binding: ActivityHomeBinding
     private val app by lazy { application as LicoresLunaApp }
@@ -48,10 +47,6 @@ class HomeActivity : AppCompatActivity() {
 
         binding.cardExpenses.setOnClickListener {
             startActivity(Intent(this, ExpensesActivity::class.java))
-        }
-
-        binding.cardContainers.setOnClickListener {
-            startActivity(Intent(this, ContainersActivity::class.java))
         }
 
         binding.cardSummary.setOnClickListener {

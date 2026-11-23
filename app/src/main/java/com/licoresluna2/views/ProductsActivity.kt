@@ -6,7 +6,6 @@ import android.provider.OpenableColumns
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isGone
@@ -32,7 +31,7 @@ import io.github.jan.supabase.postgrest.query.Order
 import io.github.jan.supabase.storage.storage
 import kotlinx.coroutines.launch
 
-class ProductsActivity : AppCompatActivity() {
+class ProductsActivity : BaseActivity() {
 
     private lateinit var binding: ActivityProductsBinding
     private val app by lazy { application as LicoresLunaApp }

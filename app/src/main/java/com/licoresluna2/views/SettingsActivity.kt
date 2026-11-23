@@ -2,14 +2,13 @@ package com.licoresluna2.views
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.licoresluna2.LicoresLunaApp
 import com.licoresluna2.databinding.ActivitySettingsBinding
 import com.licoresluna2.utils.SessionManager
 
-class SettingsActivity : AppCompatActivity() {
+class SettingsActivity : BaseActivity() {
 
     private lateinit var binding: ActivitySettingsBinding
     private val app by lazy { application as LicoresLunaApp }
@@ -27,7 +26,16 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         setupCurrentThemeSelection()
+        setupCurrentFontScaleSelection()
         setupListeners()
+    }
+
+    private fun setupCurrentFontScaleSelection() {
+        when (app.sessionManager.getFontScale()) {
+            SessionManager.FONT_SCALE_SMALL -> binding.rbFontSmall.isChecked = true
+            SessionManager.FONT_SCALE_LARGE -> binding.rbFontLarge.isChecked = true
+            else -> binding.rbFontDefault.isChecked = true
+        }
     }
 
     private fun setupCurrentThemeSelection() {
@@ -51,6 +59,19 @@ class SettingsActivity : AppCompatActivity() {
             if (app.sessionManager.getThemeMode() != newTheme) {
                 app.sessionManager.saveThemeMode(newTheme)
                 app.sessionManager.applySavedTheme()
+            }
+        }
+
+        binding.rgFontScaleOptions.setOnCheckedChangeListener { _, checkedId ->
+            val scale = when (checkedId) {
+                binding.rbFontSmall.id -> SessionManager.FONT_SCALE_SMALL
+                binding.rbFontLarge.id -> SessionManager.FONT_SCALE_LARGE
+                else -> SessionManager.FONT_SCALE_DEFAULT
+            }
+
+            if (app.sessionManager.getFontScale() != scale) {
+                app.sessionManager.saveFontScale(scale)
+                recreate()
             }
         }
     }

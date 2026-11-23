@@ -3,7 +3,6 @@ package com.licoresluna2.views
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.licoresluna2.LicoresLunaApp
 import com.licoresluna2.R
@@ -20,7 +19,7 @@ import java.time.ZoneId
 import java.time.temporal.ChronoUnit
 import java.util.Locale
 
-class SummaryActivity : AppCompatActivity() {
+class SummaryActivity : BaseActivity() {
 
     private enum class Period { DATE, WEEK, MONTH, ALL }
 

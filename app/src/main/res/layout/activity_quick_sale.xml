@@ -9,10 +9,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center_horizontal"
+        android:layout_gravity="top"
+        android:gravity="start"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="16dp">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
@@ -24,19 +24,19 @@
             android:textColor="@color/amber_light" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:text="@string/quick_sale_title"
             android:textColor="@color/text_primary"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
             android:text="@string/quick_sale_subtitle"
             android:textColor="@color/text_secondary"
             android:textSize="13sp" />
